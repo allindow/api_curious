@@ -1,0 +1,14 @@
+<%= current_user.username %>
+<%= image_tag current_user.profile_picture, {class: "img-circle"} %>
+<%= image_tag(@pic.standard_url) %>
+<h1>Likes: <%= @pic.like_count %></h1>
+<h1>Caption</h1>
+<%= @pic.caption_text %>
+<h1>Comments</h1>
+<% if @comments %>
+  <% @comments.each do |comment| %>
+    <p>
+      <strong><%= comment.author %></strong> <%= comment.text %>
+    </p>
+  <% end %>
+<% end %>

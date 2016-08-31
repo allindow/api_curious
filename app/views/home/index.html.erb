@@ -1,0 +1,26 @@
+<center>
+  <% if current_user %>
+    <p><h1 class="welcome">
+      Hello, <%= current_user.username %>.
+    </h1></p>
+    <p>
+      <h4>This is APICurious.</h4>
+    </p>
+    <button class="btn btn-default">
+      <%= link_to "Logout", logout_path, method: :delete %>
+    </button><br><br>
+    <p><a href='/user_recent_media'>
+      Your Recent Posts
+    </a></p>
+  <% else %>
+    <p><h1 class="welcome">
+      Hello, this is APICurious,
+    </h1></p>
+    <p>
+      <h4>an exploration into API consumption.</h4>
+    </p>
+    <button class="btn btn-default">
+      <%= link_to "Login with Instagram", instagram_login_path %>
+    </button><br><br>
+  <% end  %>
+</center>

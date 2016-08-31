@@ -1,0 +1,21 @@
+.user-head {
+  margin-bottom: 60px;
+  margin-top: 20px;
+}
+
+.welcome {
+  margin-top: 180px;
+  font-weight: normal;
+}
+
+.index-pic {
+  margin-top: 11px;
+  margin-bottom: 11px;
+  margin-right: 11px;
+  margin-left: 11px;
+}
+
+.username {
+  font-size: 30px;
+  font-weight: 300;
+}
