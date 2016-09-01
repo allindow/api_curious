@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/users/28612086?access_token=28612086.40494cd.7c669e402f234131aa9a9c30ef7618b1&client_id=40494cd720eb4bc9a77cdfca1f24b454
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '490'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '500'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Thu, 01 Sep 2016 04:29:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=IITZ9c7JJOEtr5WBE0BSLxzmZ63khlwt; expires=Thu, 31-Aug-2017 04:29:05
+        GMT; Max-Age=31449600; Path=/; secure
+      - s_network=; expires=Thu, 01-Sep-2016 05:29:05 GMT; Max-Age=3600; Path=/
+      - sessionid=IGSC8f4f75c5310f50fb7a4facc17bd382b3b94281939cdf0fdf64f78b39c02f367e%3AIbdnmIIQ3jD2pyhF9E5WoPedXFNp9ErD%3A%7B%22asns%22%3A%7B%22184.96.44.50%22%3A209%2C%22time%22%3A1472704145%7D%7D;
+        expires=Wed, 30-Nov-2016 04:29:05 GMT; httponly; Max-Age=7776000; Path=/;
+        secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '263'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta": {"code": 200}, "data": {"username": "4ng3l4", "bio": "I''m
+        a happy lady with a happy family and a happy life.", "website": "", "profile_picture":
+        "https://scontent.cdninstagram.com/t51.2885-19/11925837_1461009007538193_1505129354_a.jpg",
+        "full_name": "Angela Lindow", "counts": {"media": 39, "followed_by": 193,
+        "follows": 341}, "id": "28612086"}}'
+    http_version: 
+  recorded_at: Thu, 01 Sep 2016 04:29:05 GMT
+recorded_with: VCR 3.0.3

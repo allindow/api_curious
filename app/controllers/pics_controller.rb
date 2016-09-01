@@ -1,6 +1,6 @@
 class PicsController < ApplicationController
   def show
-    @pic = IgPic.pic(params["id"], current_user)
-    @comments = IgPic.comments(params["id"], current_user)
+    @media = IgPicPresenter.new(params["id"], current_user.oath_token)
+    render :layout => false
   end
 end

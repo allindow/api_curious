@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.instagram.com/v1/media/1256220436079878061_28612086?access_token=28612086.40494cd.7c669e402f234131aa9a9c30ef7618b1&client_id=40494cd720eb4bc9a77cdfca1f24b454
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Ratelimit-Remaining:
+      - '491'
+      Content-Language:
+      - en
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Vary:
+      - Cookie, Accept-Language, Accept-Encoding
+      X-Ratelimit-Limit:
+      - '500'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Date:
+      - Thu, 01 Sep 2016 04:23:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Set-Cookie:
+      - csrftoken=wFomOY954BCSKj3owXbrTEuRpugfLXiG; expires=Thu, 31-Aug-2017 04:23:24
+        GMT; Max-Age=31449600; Path=/; secure
+      - s_network=; expires=Thu, 01-Sep-2016 05:23:24 GMT; Max-Age=3600; Path=/
+      - sessionid=IGSC2cb05fcedf5c03685b549af26175df5559a7f4c7b5d952ded66599121ecde455%3AratkLvNjXMvnd2O3uGwhgn1RmkvcfB4q%3A%7B%22asns%22%3A%7B%22184.96.44.50%22%3A209%2C%22time%22%3A1472703804%7D%7D;
+        expires=Wed, 30-Nov-2016 04:23:24 GMT; httponly; Max-Age=7776000; Path=/;
+        secure
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '639'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"meta": {"code": 200}, "data": {"attribution": null, "tags": ["abigailmercy"],
+        "type": "image", "location": null, "comments": {"count": 2}, "filter": "Rise",
+        "created_time": "1463973167", "link": "https://www.instagram.com/p/BFu_dS0IJ-thocuj3kkdiTYEwnenSDrSMWFssA0/",
+        "likes": {"count": 19}, "images": {"low_resolution": {"url": "https://scontent.cdninstagram.com/t51.2885-15/s320x320/e35/13260786_1225197347499881_2075790074_n.jpg?ig_cache_key=MTI1NjIyMDQzNjA3OTg3ODA2MQ%3D%3D.2",
+        "width": 320, "height": 320}, "thumbnail": {"url": "https://scontent.cdninstagram.com/t51.2885-15/s150x150/e35/13260786_1225197347499881_2075790074_n.jpg?ig_cache_key=MTI1NjIyMDQzNjA3OTg3ODA2MQ%3D%3D.2",
+        "width": 150, "height": 150}, "standard_resolution": {"url": "https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/13260786_1225197347499881_2075790074_n.jpg?ig_cache_key=MTI1NjIyMDQzNjA3OTg3ODA2MQ%3D%3D.2",
+        "width": 640, "height": 640}}, "users_in_photo": [], "caption": {"created_time":
+        "1463973167", "text": "Her face \ud83d\ude0d ahhh I love this little munchkin
+        #abigailmercy", "from": {"username": "4ng3l4", "profile_picture": "https://scontent.cdninstagram.com/t51.2885-19/11925837_1461009007538193_1505129354_a.jpg",
+        "id": "28612086", "full_name": "Angela Lindow"}, "id": "17847875965105189"},
+        "user_has_liked": false, "id": "1256220436079878061_28612086", "user": {"username":
+        "4ng3l4", "profile_picture": "https://scontent.cdninstagram.com/t51.2885-19/11925837_1461009007538193_1505129354_a.jpg",
+        "id": "28612086", "full_name": "Angela Lindow"}}}'
+    http_version: 
+  recorded_at: Thu, 01 Sep 2016 04:23:24 GMT
+recorded_with: VCR 3.0.3

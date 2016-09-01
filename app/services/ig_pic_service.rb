@@ -1,8 +1,8 @@
 class IgPicService
-  def initialize(id, current_user)
+  def initialize(id, token)
     @id           = id
     @connection   = Faraday.new("https://api.instagram.com/v1/media/")
-    @connection.params["access_token"] = current_user.oath_token
+    @connection.params["access_token"] = token
     @connection.params["client_id"] = ENV["INSTAGRAM_ID"]
   end
 

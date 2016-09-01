@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @recent_media = IgUser.all_pics(current_user)
-    @user = IgUser.user_data(current_user)
+    @user = IgUserPresenter.new(current_user.uid, current_user.oath_token)
+    @media = Kaminari.paginate_array(@user.recent_media).page(params[:media_page]).per(3)
   end
 end

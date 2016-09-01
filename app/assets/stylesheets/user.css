@@ -13,9 +13,62 @@
   margin-bottom: 11px;
   margin-right: 11px;
   margin-left: 11px;
+  width: 320px;
+  height: 320px;
+}
+
+.wrapper {
+  margin-top: 11px;
+  margin-bottom: 11px;
+  margin-right: 11px;
+  margin-left: 11px;
+  width: 320px;
+  height: 320px;
+  display:inline-block
+}
+
+.wrapper:hover {
+
+  background-color: black;
+}
+.index-pic:hover  {
+    opacity: .5;
 }
 
 .username {
   font-size: 30px;
   font-weight: 300;
+}
+
+.small {
+  width: 40px;
+  height: 40px;
+}
+.btn-img {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: white;
+
+}
+.btn-img .img-wrap {
+    margin: 10px;
+
+}
+
+.btn-img img {
+    display: block;
+
+}
+
+.btn-img:hover .img-wrap {
+    background-color: black;
+
+}
+
+.btn-img:hover img {
+    opacity: 0.4;
+
 }

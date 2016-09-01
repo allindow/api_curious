@@ -1,21 +1,25 @@
 <div class="col-md-offset-2 col-md-7 user-head">
   <%= image_tag current_user.profile_picture, {class: "img-circle", style: "float:left" } %>
   <div style="float:right">
-    <p><text class="username"><%= @user.username %></text></p>
+    <p><text class="username"><%= @user.details.username %></text></p>
     <p>
-      <strong><%= @user.full_name %></strong> <%= @user.bio %>
+      <strong><%= @user.details.full_name %></strong> <%= @user.details.bio %>
     </p>
     <p>
-      <strong><%= @user.post_count %></strong> posts&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      <strong><%= @user.follower_count %></strong> followers&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-      <strong><%= @user.following_count %></strong> following
+      <strong><%= @user.details.post_count %></strong> posts&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <strong><%= @user.details.follower_count %></strong> followers&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <strong><%= @user.details.following_count %></strong> following
     </p>
   </div>
 </div>
-
+<%= render "modal" %>
 <div class="col-md-offset-1 col-md-11 col-md-offset-1">
-  <% @recent_media.each do |media_item| %>
-    <%= link_to image_tag(media_item.low_res_url, class: "index-pic"), pic_path(media_item.id), :onclick =>
-"openWindow(this); return false;" %>
-  <% end %>
+  <table id="media">
+    <thead>
+    </thead>
+    <tbody class="page">
+      <%= render "media", :object => @media %>
+    </tbody>
+  </table>
 </div>
+<%= paginate @media, :param_name => :media_page %>

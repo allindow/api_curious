@@ -1,0 +1,10 @@
+<tr class="media_post">
+<% @media.each do |media_item| %>
+<td>
+  <button class="btn-img">
+  <div class="img-wrap">
+    <%= link_to image_tag(media_item.low_res_url), pic_path(media_item.id), :class => "btn", data: {toggle: "modal", target: "#myModal"} %>
+  </div>
+</button>
+<% end %>
+</tr>

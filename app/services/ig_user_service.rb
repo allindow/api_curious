@@ -1,8 +1,8 @@
 class IgUserService
-  def initialize(current_user)
-    @current_user = current_user
+  def initialize(uid, token)
+    @uid = uid
     @connection   = Faraday.new("https://api.instagram.com/v1/users/")
-    @connection.params["access_token"] = current_user.oath_token
+    @connection.params["access_token"] = token
     @connection.params["client_id"] = ENV["INSTAGRAM_ID"]
   end
 
@@ -13,7 +13,7 @@ class IgUserService
   end
 
   def get_user_data
-    response = @connection.get "#{current_user.uid}"
+    response = @connection.get "#{uid}"
     parse(response.body)
   end
 
@@ -22,5 +22,5 @@ class IgUserService
       JSON.parse(response, symbolize_names: true)
     end
 
-    attr_reader :current_user
+    attr_reader :uid
 end

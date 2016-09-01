@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'figaro'
 gem 'faraday'
 gem 'omniauth-instagram'
+gem 'kaminari'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
@@ -41,6 +42,11 @@ group :development, :test do
   gem 'launchy'
   gem 'unicorn'
   gem 'pry-rails'
+end
+
+group :test do
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do
