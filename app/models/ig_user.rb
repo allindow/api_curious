@@ -1,6 +1,6 @@
 class IgUser < OpenStruct
   def self.service(uid, token)
-    @@service ||= IgUserService.new(uid, token)
+    IgUserService.new(uid, token)
   end
 
   def self.all_pics(uid, token)

@@ -1,6 +1,6 @@
 class IgPic < OpenStruct
   def self.service(id, current_user)
-    @@service = IgPicService.new(id, current_user)
+    IgPicService.new(id, current_user)
   end
 
   def self.pic(id, current_user)
